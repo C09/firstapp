@@ -1,0 +1,17 @@
+<html>
+<body>
+    {% load tag %}  
+<div id="id_div">
+    {% display_plotname 'Top 10 Movie genres based on revenue collection ' as plt_text %}
+    <strong> {{ plt_text }} </strong>
+</div>
+
+
+<div id="id_div_2">
+    {% create_movies_plot as plt_c%}
+    <strong> {{ plt_rc }} </strong>
+    
+</div>
+
+</body>
+</html>

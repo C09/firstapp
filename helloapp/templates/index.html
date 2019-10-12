@@ -1,0 +1,137 @@
+    
+
+<!-- helloapp/templates/index.html -->
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Howdy!</title>
+    </head>
+    <body>
+        <h1>Howdy! I am Learning Django!</h1>
+        <a href="/about/">About Me</a>
+        <a href="/plotly/">See Me</a>
+        <a href="http://localhost:5000">Flask Plotly Example</a>
+        <a href="/PageExample/">PageExample</a>
+    </body>
+</html>
+
+-->
+
+<html>
+<title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<style>
+h1 { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia,
+ serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700;
+ line-height: 26.4px; } h3 { font-family: Palatino, Palatino Linotype, Palatino LT STD,
+ Book Antiqua, Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; 
+ font-weight: 700; line-height: 15.4px; } p { font-family: Palatino, Palatino Linotype, 
+ Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 14px; font-style: normal;
+ font-variant: normal; font-weight: 400; line-height: 20px; } blockquote 
+ { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, 
+ Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; 
+ font-weight: 400; line-height: 30px; } 
+ pre { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia,
+  serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400;
+   line-height: 18.5667px; }
+</style>   
+<body>
+
+<!-- !PAGE CONTENT! 8729DF -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1>Portfolio</h1>
+  <h2>Chandni Joshi Purohit</h1>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+        <a href="/about/" class="w3-bar-item w3-button">Home</a>
+        <a href="/plotly/" class="w3-bar-item w3-button">Portfolio</a>
+        <a href="http://localhost:5000" class="w3-bar-item w3-button">Flask Plotly Example</a>
+        <a href="/PageExample/" class="w3-bar-item w3-button">PageExample</a>
+        <a href="/TagExample/" class="w3-bar-item w3-button">TagExample</a>
+        <a href="#" class="w3-bar-item w3-button">Contact</a>
+      <!--<a href="#" class="w3-bar-item w3-button w3-hide-small">Weddings</a> -->
+    </div>
+  </div>
+</header>
+
+<!-- Photo Grid -->
+<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
+  <div class="w3-half">
+   
+    <p class = "none" width="500*500">
+    <h1>
+    Movies Dataset Analysis 
+    </h1>
+    <lr/>
+    <h3> <I>Data Cleaning, Exploration, Analysis & Machine Learning | Python </I>
+    </h3>
+    </p>
+    
+     {% load static %}
+    <a href="{% url "plotly_movies1" %}">   
+    <img src="{% static "helloapp/movies_dataset.jpg" %}" href="{% url "plotly_movies1" %}" alt="Movies Picture" style="width:50%">
+    </a>
+    {% load static %}
+    
+    
+    <img src="/w3images/rocks.jpg" style="width:70%">
+    <img src="/w3images/falls2.jpg" style="width:70%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-half">
+    <p class = "none" width="500*500">
+    <h1>
+    Kiva.org Loans Analysis </h1>
+    <lr/>
+    <h3> <I>Data Modelling, ETL & Dashboards | Pentaho | Tableau </I>
+    </h3>
+    </p>
+    
+     {% load static %}
+    <img src="{% static "helloapp/kiva_main.png" %}" alt="Kiva" style="width:50%">
+    {% load static %}
+    
+    
+    <img src="/w3images/ocean.jpg" style="width:100%">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/mountainskies.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+  </div>
+</div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
